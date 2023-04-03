@@ -14,7 +14,7 @@ const App = () => {
   return (
     <div>
       <AddUser addUser={addUserToList} />
-      <UsersList users={usersList} />
+      {usersList.length > 0 && <UsersList users={usersList} />}
     </div>
   );
 };
