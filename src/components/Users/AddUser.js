@@ -3,13 +3,16 @@ import Card from "../UI/Card";
 import classes from "./AddUser.module.css";
 import Button from "../UI/Button";
 
-const AddUser = () => {
+const AddUser = (props) => {
   const [enteredUsername, setenteredUsername] = useState("");
   const [enteredAge, setEnteredAge] = useState("");
 
   const addUserHandler = (event) => {
     event.preventDefault();
     console.log(enteredUsername, enteredAge);
+
+    setenteredUsername("");
+    setEnteredAge("");
   };
 
   const usernameChangeHandler = (event) => {
