@@ -14,7 +14,7 @@ const AddUser = (props) => {
 
     if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0) {
       setError({
-        title: "Invalid name",
+        title: "Invalid Input",
         message: "Please enter a valid name and age (non-empty values)",
       });
       return;
@@ -34,15 +34,12 @@ const AddUser = (props) => {
     setEnteredAge("");
   };
 
-  const usernameChangeHandler = (event) => {
+  const usernameChangeHandler = (event) =>
     setenteredUsername(event.target.value);
-  };
 
-  const ageChangeHandler = (event) => {
-    setEnteredAge(event.target.value);
-  };
+  const ageChangeHandler = (event) => setEnteredAge(event.target.value);
 
-  const errorHandler = () => [setError(null)];
+  const errorHandler = () => setError(null);
 
   return (
     <div>
